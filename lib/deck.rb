@@ -6,11 +6,13 @@ class Deck
   end
 
   def count
-    @deck.cards
+    @deck.cards #@cards.count?
   end
 
-  def cards_in_category
-    
+  def cards_in_category(category)
+    @cards.find_all do |card|
+      card.category == category
+    end
   end
 
 
